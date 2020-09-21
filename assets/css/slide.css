@@ -1,0 +1,101 @@
+body{
+	margin: 0;
+	font-family: sans-serif;
+
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.thumbnail-slider{
+	width: 100%;
+	float: left;
+	overflow: hidden;
+}
+
+.thumbnail-slider .thumbnail-container{
+	width: 100%;
+	float:left ;
+	transition: margin 1s ease;
+}
+
+.thumbnail-slider .item{
+	height: 250px;
+	background-color: grey;
+	text-align: center;
+	float: left;
+	position: relative;
+	overflow: hidden
+}
+.thumbnail-slider .item:hover > .cont-item{
+	opacity: 1;
+	
+}
+
+.thumbnail-slider .item img{
+	width: 100%;
+	height: 100%;
+
+}
+
+
+ 
+.thumbnail-slider .item .cont-item{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 1);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color: orange;
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	transition: .3s;
+}
+
+.thumbnail-slider .controls{
+	width: 100%;
+	float: left;
+	padding: 15px;
+}
+
+.thumbnail-slider .controls ul{
+	display: block;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.thumbnail-slider .controls ul li{
+	height: 35px;
+	width: 35px;
+	border: 1px solid orange;
+	margin: 4px;
+	display: inline-block;
+	line-height: 33px;
+	cursor: pointer;
+	color:  orange;
+}
+.thumbnail-slider .controls ul li.active{
+	background-color: orange;
+	color: #272727;
+	font-weight: bold;
+
+}
+
+.item p{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.item a{
+	font-size: 14px;
+	margin: 0px 2.5px;
+	color: orange;
+}
